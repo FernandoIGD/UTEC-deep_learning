@@ -1,0 +1,16 @@
+{
+  "modelo": "lstm",
+  "dispositivo": "mps",
+  "parametros": 78896,
+  "epocas_entrenadas": 16,
+  "segundos_por_epoca": 27.239228188991547,
+  "segundos_inferencia_test": 0.7072281837463379,
+  "NSE_val": 0.644484281539917,
+  "RMSE_val": 0.10231349617242813,
+  "R_val": 0.8034730141851507,
+  "epocas": 30,
+  "paciencia": 5,
+  "batch": 256,
+  "lr": 0.001,
+  "semilla": 42
+}

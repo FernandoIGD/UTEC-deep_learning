@@ -1,0 +1,16 @@
+{
+  "modelo": "fdmlp",
+  "dispositivo": "mps",
+  "parametros": 1910064,
+  "epocas_entrenadas": 13,
+  "segundos_por_epoca": 1026.6529670128455,
+  "segundos_inferencia_test": 38.54451036453247,
+  "NSE_val": 0.5804551839828491,
+  "RMSE_val": 0.11114570498466492,
+  "R_val": 0.7674690091210858,
+  "epocas": 30,
+  "paciencia": 5,
+  "batch": 256,
+  "lr": 0.001,
+  "semilla": 42
+}

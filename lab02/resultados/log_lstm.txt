@@ -1,0 +1,28 @@
+Modelo: lstm | Dispositivo: mps
+Variables seleccionadas por LASSO: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Parámetros: 814,128
+Época 01 | MSE train: 0.4198 | NSE val: 0.6180 | RMSE val: 0.1061 | 127 s
+Época 02 | MSE train: 0.3919 | NSE val: 0.6315 | RMSE val: 0.1042 | 126 s
+Época 03 | MSE train: 0.3815 | NSE val: 0.6375 | RMSE val: 0.1033 | 125 s
+Época 04 | MSE train: 0.3741 | NSE val: 0.6339 | RMSE val: 0.1038 | 125 s
+Época 05 | MSE train: 0.3699 | NSE val: 0.6322 | RMSE val: 0.1041 | 125 s
+Época 06 | MSE train: 0.3663 | NSE val: 0.6288 | RMSE val: 0.1045 | 125 s
+Época 07 | MSE train: 0.3613 | NSE val: 0.6323 | RMSE val: 0.1041 | 126 s
+Época 08 | MSE train: 0.3582 | NSE val: 0.5910 | RMSE val: 0.1097 | 124 s
+Parada temprana
+{
+  "modelo": "lstm",
+  "dispositivo": "mps",
+  "parametros": 814128,
+  "epocas_entrenadas": 8,
+  "segundos_por_epoca": 125.38292694091797,
+  "segundos_inferencia_test": 4.2664899826049805,
+  "NSE_val": 0.6374512910842896,
+  "RMSE_val": 0.10332054644823074,
+  "R_val": 0.7988696566889253,
+  "epocas": 30,
+  "paciencia": 5,
+  "batch": 256,
+  "lr": 0.001,
+  "semilla": 42
+}

@@ -1,0 +1,30 @@
+{
+  "alpha": 0.0007431836565956473,
+  "coeficientes": {
+    "convective_fraction": -0.018489865586161613,
+    "longwave_radiation": 0.13331027328968048,
+    "potential_energy": -0.0,
+    "potential_evaporation": -0.15319477021694183,
+    "pressure": -0.018748095259070396,
+    "shortwave_radiation": 0.12259487807750702,
+    "specific_humidity": -0.10585827380418777,
+    "temperature": -0.05025581642985344,
+    "total_precipitation": 0.1262662708759308,
+    "wind_u": -0.029861824586987495,
+    "wind_v": 0.08586037158966064,
+    "specific_discharge": 0.6631768345832825
+  },
+  "seleccion": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

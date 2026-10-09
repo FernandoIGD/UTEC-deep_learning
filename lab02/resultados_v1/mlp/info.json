@@ -1,0 +1,16 @@
+{
+  "modelo": "mlp",
+  "dispositivo": "mps",
+  "parametros": 172160,
+  "epocas_entrenadas": 12,
+  "segundos_por_epoca": 64.37105315923691,
+  "segundos_inferencia_test": 1.7526960372924805,
+  "NSE_val": 0.6385753750801086,
+  "RMSE_val": 0.10316024720668793,
+  "R_val": 0.7992073253558126,
+  "epocas": 30,
+  "paciencia": 5,
+  "batch": 256,
+  "lr": 0.001,
+  "semilla": 42
+}

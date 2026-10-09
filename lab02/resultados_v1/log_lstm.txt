@@ -1,0 +1,35 @@
+Modelo: lstm | Dispositivo: mps
+Parámetros: 78,896
+Época 01 | MSE train: 0.4252 | NSE val: 0.6203 | RMSE val: 0.1057 | 28 s
+Época 02 | MSE train: 0.3850 | NSE val: 0.6210 | RMSE val: 0.1056 | 28 s
+Época 03 | MSE train: 0.3784 | NSE val: 0.6347 | RMSE val: 0.1037 | 27 s
+Época 04 | MSE train: 0.3713 | NSE val: 0.6247 | RMSE val: 0.1051 | 27 s
+Época 05 | MSE train: 0.3677 | NSE val: 0.6177 | RMSE val: 0.1061 | 27 s
+Época 06 | MSE train: 0.3654 | NSE val: 0.6373 | RMSE val: 0.1033 | 28 s
+Época 07 | MSE train: 0.3624 | NSE val: 0.6307 | RMSE val: 0.1043 | 28 s
+Época 08 | MSE train: 0.3596 | NSE val: 0.6400 | RMSE val: 0.1030 | 28 s
+Época 09 | MSE train: 0.3545 | NSE val: 0.6358 | RMSE val: 0.1036 | 27 s
+Época 10 | MSE train: 0.3526 | NSE val: 0.6421 | RMSE val: 0.1027 | 27 s
+Época 11 | MSE train: 0.3489 | NSE val: 0.6445 | RMSE val: 0.1023 | 27 s
+Época 12 | MSE train: 0.3460 | NSE val: 0.6124 | RMSE val: 0.1068 | 27 s
+Época 13 | MSE train: 0.3427 | NSE val: 0.6187 | RMSE val: 0.1060 | 27 s
+Época 14 | MSE train: 0.3364 | NSE val: 0.6201 | RMSE val: 0.1058 | 26 s
+Época 15 | MSE train: 0.3351 | NSE val: 0.6287 | RMSE val: 0.1046 | 27 s
+Época 16 | MSE train: 0.3315 | NSE val: 0.5952 | RMSE val: 0.1092 | 27 s
+Parada temprana
+{
+  "modelo": "lstm",
+  "dispositivo": "mps",
+  "parametros": 78896,
+  "epocas_entrenadas": 16,
+  "segundos_por_epoca": 27.239228188991547,
+  "segundos_inferencia_test": 0.7072281837463379,
+  "NSE_val": 0.644484281539917,
+  "RMSE_val": 0.10231349617242813,
+  "R_val": 0.8034730141851507,
+  "epocas": 30,
+  "paciencia": 5,
+  "batch": 256,
+  "lr": 0.001,
+  "semilla": 42
+}

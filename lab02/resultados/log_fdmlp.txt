@@ -1,0 +1,33 @@
+Modelo: fdmlp | Dispositivo: mps
+Variables seleccionadas por LASSO: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Parámetros: 1,910,064
+Época 01 | MSE train: 0.4954 | NSE val: 0.5190 | RMSE val: 0.1190 | 1035 s
+Época 02 | MSE train: 0.4859 | NSE val: 0.5365 | RMSE val: 0.1168 | 1028 s
+Época 03 | MSE train: 0.4782 | NSE val: 0.5482 | RMSE val: 0.1153 | 1028 s
+Época 04 | MSE train: 0.4646 | NSE val: 0.5727 | RMSE val: 0.1122 | 1028 s
+Época 05 | MSE train: 0.4897 | NSE val: 0.5457 | RMSE val: 0.1157 | 1028 s
+Época 06 | MSE train: 0.4623 | NSE val: 0.5660 | RMSE val: 0.1130 | 1009 s
+Época 07 | MSE train: 0.4534 | NSE val: 0.5790 | RMSE val: 0.1113 | 1026 s
+Época 08 | MSE train: 0.4552 | NSE val: 0.5805 | RMSE val: 0.1111 | 1027 s
+Época 09 | MSE train: 0.4511 | NSE val: 0.5559 | RMSE val: 0.1143 | 1027 s
+Época 10 | MSE train: 0.4534 | NSE val: 0.5665 | RMSE val: 0.1130 | 1027 s
+Época 11 | MSE train: 0.4584 | NSE val: 0.5503 | RMSE val: 0.1151 | 1028 s
+Época 12 | MSE train: 0.4754 | NSE val: 0.4808 | RMSE val: 0.1236 | 1027 s
+Época 13 | MSE train: 0.5150 | NSE val: 0.5359 | RMSE val: 0.1169 | 1027 s
+Parada temprana
+{
+  "modelo": "fdmlp",
+  "dispositivo": "mps",
+  "parametros": 1910064,
+  "epocas_entrenadas": 13,
+  "segundos_por_epoca": 1026.6529670128455,
+  "segundos_inferencia_test": 38.54451036453247,
+  "NSE_val": 0.5804551839828491,
+  "RMSE_val": 0.11114570498466492,
+  "R_val": 0.7674690091210858,
+  "epocas": 30,
+  "paciencia": 5,
+  "batch": 256,
+  "lr": 0.001,
+  "semilla": 42
+}

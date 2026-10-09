@@ -1,0 +1,31 @@
+Modelo: mlp | Dispositivo: mps
+Parámetros: 172,160
+Época 01 | MSE train: 0.4201 | NSE val: 0.6165 | RMSE val: 0.1063 | 64 s
+Época 02 | MSE train: 0.3858 | NSE val: 0.6229 | RMSE val: 0.1054 | 64 s
+Época 03 | MSE train: 0.3771 | NSE val: 0.6283 | RMSE val: 0.1046 | 65 s
+Época 04 | MSE train: 0.3709 | NSE val: 0.6335 | RMSE val: 0.1039 | 64 s
+Época 05 | MSE train: 0.3661 | NSE val: 0.5877 | RMSE val: 0.1102 | 65 s
+Época 06 | MSE train: 0.3630 | NSE val: 0.6356 | RMSE val: 0.1036 | 65 s
+Época 07 | MSE train: 0.3590 | NSE val: 0.6386 | RMSE val: 0.1032 | 65 s
+Época 08 | MSE train: 0.3560 | NSE val: 0.6295 | RMSE val: 0.1044 | 65 s
+Época 09 | MSE train: 0.3519 | NSE val: 0.6273 | RMSE val: 0.1048 | 64 s
+Época 10 | MSE train: 0.3470 | NSE val: 0.6317 | RMSE val: 0.1041 | 64 s
+Época 11 | MSE train: 0.3435 | NSE val: 0.6276 | RMSE val: 0.1047 | 64 s
+Época 12 | MSE train: 0.3404 | NSE val: 0.5970 | RMSE val: 0.1089 | 64 s
+Parada temprana
+{
+  "modelo": "mlp",
+  "dispositivo": "mps",
+  "parametros": 172160,
+  "epocas_entrenadas": 12,
+  "segundos_por_epoca": 64.37105315923691,
+  "segundos_inferencia_test": 1.7526960372924805,
+  "NSE_val": 0.6385753750801086,
+  "RMSE_val": 0.10316024720668793,
+  "R_val": 0.7992073253558126,
+  "epocas": 30,
+  "paciencia": 5,
+  "batch": 256,
+  "lr": 0.001,
+  "semilla": 42
+}
