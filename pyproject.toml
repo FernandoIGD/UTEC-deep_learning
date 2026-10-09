@@ -1,0 +1,19 @@
+[project]
+name = "utec-deep-learning"
+version = "0.1.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "gdown==6.4.1",
+    "h5py==3.16.0",
+    "ipykernel==7.4.0",
+    "jupyterlab==4.6.4",
+    "matplotlib==3.11.2",
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "scikit-learn==1.9.1",
+    "seaborn==0.13.2",
+    "torch==2.14.1",
+]
+
+[tool.uv]
+package = false

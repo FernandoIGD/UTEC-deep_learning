@@ -1,0 +1,26 @@
+.DS_Store
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+.env
+.env.*
+
+# Datos y material de entrega fuera del código fuente.
+**/Rainfall-Runoff/
+**/video/
+*.h5
+*.hdf5
+*.mp4
+*.mov
+*.pdf
+*.docx
+
+# Artefactos generados por el laboratorio.
+lab02/predicciones_test.csv
+lab02/resultados/*/pred_test.csv
+lab02/resultados_v1/*/pred_test.csv
+*.pt
+*.pth
+*.npy
+*.npz
