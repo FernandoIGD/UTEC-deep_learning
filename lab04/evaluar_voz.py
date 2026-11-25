@@ -43,7 +43,7 @@ def cargar_modelos(dispositivo):
     tiempos["tts"] = time.perf_counter() - inicio
 
     inicio = time.perf_counter()
-    asr = cargar_asr()
+    asr = cargar_asr(dispositivo)
     tiempos["asr"] = time.perf_counter() - inicio
 
     agente = Agente(tok, llm, buscador, Tienda(catalogo["product_id"]))

@@ -32,8 +32,11 @@ CENTENAS = {"cien": 100, "ciento": 100} | {
 CENTENAS |= {"quinientos": 500, "quinientas": 500}
 
 
-def cargar_asr():
-    # Whisper en CPU con INT8 deja la memoria de la GPU para el LLM y el TTS.
+def cargar_asr(dispositivo):
+    # En los 2 núcleos de CPU de Colab, Whisper tardó 25,8 s por turno. En la GPU ocupa ~1 GB y la T4 tiene espacio.
+    # CTranslate2 no soporta la GPU de Apple, por lo que en el Mac se mantiene la CPU.
+    if dispositivo == "cuda":
+        return WhisperModel(MODELO_ASR, device="cuda", compute_type="int8_float16")
     return WhisperModel(MODELO_ASR, device="cpu", compute_type="int8")
 
 
