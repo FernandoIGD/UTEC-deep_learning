@@ -28,13 +28,3 @@ El cuaderno conserva las salidas de la ejecución original y descarga los archiv
 Asistente que recibe consultas habladas en español, recupera productos de Amazon ESCI con una búsqueda híbrida (BM25 + E5), ejecuta operaciones validadas sobre una tienda simulada y responde con voz clonada. El código y el análisis se encuentran en [`lab04/`](lab04/).
 
 La ejecución principal es el cuaderno [`lab04/laboratorio4.ipynb`](lab04/laboratorio4.ipynb) en Google Colab con GPU; sus primeras celdas clonan el repositorio e instalan las versiones utilizadas. Las grabaciones de voz no se publican y se suben en la celda correspondiente.
-
-Para desarrollo local en Apple Silicon:
-
-```bash
-cd lab04
-uv sync --locked
-uv run --locked python datos.py
-uv run --locked python evaluar_recuperacion.py mps
-uv run --locked python evaluar_escenarios.py evaluacion mps
-```
