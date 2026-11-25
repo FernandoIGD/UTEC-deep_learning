@@ -1,0 +1,22 @@
+[project]
+name = "lab04-asistente-compras"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "av<16",
+    "bm25s>=0.3.16",
+    "datasets==4.4.1",
+    "faster-whisper==1.2.1",
+    "ipykernel>=7.4.0",
+    "jiwer>=4.0.0",
+    "matplotlib>=3.11.2",
+    "pandas>=3.1.1",
+    "pyarrow>=26.0.1",
+    "pystemmer>=3.1.0",
+    "qwen-tts==0.1.1",
+    "sentence-transformers==5.1.2",
+    "soundfile>=0.14.0",
+]
+
+[tool.uv]
+package = false
