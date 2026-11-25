@@ -11,9 +11,9 @@ Los datos de entrada y las predicciones se descargan de Google Drive con `lab02/
 Se incluyen las métricas y los historiales de ambas corridas.
 
 ```bash
-uv sync --locked
-uv run --locked python lab02/descargar_archivos.py
 cd lab02
+uv sync --locked
+uv run --locked python descargar_archivos.py
 uv run --locked python seleccion_lasso.py
 uv run --locked python entrenar.py --modelo lstm
 uv run --locked python entrenar.py --modelo fdmlp
