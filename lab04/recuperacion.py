@@ -1,5 +1,11 @@
 """Recuperación sobre el catálogo: BM25 (modelo base), embeddings E5 y combinación híbrida (RRF)."""
 
+import os
+
+# bm25s usa JAX si está instalado (Colab lo trae) y JAX reserva el 75 % de la GPU al iniciarse.
+# En CPU solo ordena los puntajes de BM25 y deja la GPU libre para el LLM y el TTS.
+os.environ.setdefault("JAX_PLATFORMS", "cpu")
+
 import bm25s
 import numpy as np
 import Stemmer
