@@ -2,6 +2,7 @@
 
 import subprocess
 import sys
+import time
 
 from datos import RAIZ
 from escenarios import EVALUACION
@@ -17,7 +18,9 @@ def grabar(texto, archivo):
         ["ffmpeg", "-loglevel", "error", "-y", "-f", "avfoundation", "-i", ":0", "-ac", "1", "-ar", "24000", str(archivo)],
         stdin=subprocess.PIPE,
     )
-    input("  Grabando. Enter para detener...")
+    # El micrófono (sobre todo el del iPhone por Continuidad) tarda en entregar audio; sin esta espera se pierde el inicio.
+    time.sleep(1.5)
+    input("  >>> HABLE AHORA. Enter para detener...")
     proceso.communicate(b"q")
 
 
