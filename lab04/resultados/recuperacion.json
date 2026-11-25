@@ -1,0 +1,43 @@
+{
+  "k_rrf": 100,
+  "ajuste": [
+    {
+      "k_rrf": 10,
+      "ndcg10_candidatos": 0.7309
+    },
+    {
+      "k_rrf": 30,
+      "ndcg10_candidatos": 0.7363
+    },
+    {
+      "k_rrf": 60,
+      "ndcg10_candidatos": 0.7378
+    },
+    {
+      "k_rrf": 100,
+      "ndcg10_candidatos": 0.7388
+    }
+  ],
+  "prueba": [
+    {
+      "sistema": "BM25 (modelo base)",
+      "ndcg10_candidatos": 0.6674,
+      "ndcg10_catalogo": 0.5481
+    },
+    {
+      "sistema": "Híbrido BM25 + E5 (sistema)",
+      "ndcg10_candidatos": 0.707,
+      "ndcg10_catalogo": 0.603
+    },
+    {
+      "sistema": "Ablación: sin BM25 (solo E5)",
+      "ndcg10_candidatos": 0.7301,
+      "ndcg10_catalogo": 0.5714
+    },
+    {
+      "sistema": "Ablación: solo título",
+      "ndcg10_candidatos": 0.6931,
+      "ndcg10_catalogo": 0.5723
+    }
+  ]
+}

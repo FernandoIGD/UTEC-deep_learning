@@ -1,0 +1,126 @@
+{
+  "id": "E08",
+  "situacion": "Cantidad mayor que las existencias",
+  "entradas": [
+    "Quiero cuarenta teclados inalámbricos iguales.",
+    "Entonces dame los que haya del primero.",
+    "Cotiza.",
+    "Confirmo."
+  ],
+  "respuestas": [
+    "Para ayudarte con cuarenta teclados inalámbricos, primero necesito saber el tipo de teclado (por ejemplo, para computadora, gaming, mecánico, etc.) y si tienes un presupuesto máximo. ¿Podrías especificar esos detalles?",
+    "El primer teclado con existencias es el de la marca Bewinner, con 19 teclas, que cuesta 30,71 euros. Actualmente solo hay 4 unidades disponibles.  \n¿Quieres ver otras opciones o deseas agregar este a tu carrito?",
+    "No se puede cotizar con 40 teclados, ya que solo hay 4 unidades disponibles del modelo Bewinner. ¿Te gustaría considerar otra opción con existencias suficientes?",
+    "No se puede confirmar el pedido porque no hay suficientes unidades disponibles. Por favor, elige otro producto con existencias suficientes."
+  ],
+  "tiempos": [
+    {
+      "total": 6.851763097000003,
+      "llm": 6.851733166000031,
+      "herramientas": 0.0
+    },
+    {
+      "total": 9.95640902499997,
+      "llm": 9.938365151000085,
+      "herramientas": 0.017807638000022052
+    },
+    {
+      "total": 9.74441764400001,
+      "llm": 9.744276895999974,
+      "herramientas": 3.805799997280701e-05
+    },
+    {
+      "total": 4.453446189000033,
+      "llm": 4.453400224000006,
+      "herramientas": 0.0
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 2,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "teclados inalámbricos"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B083FXVDR8",
+          "titulo": "Teclado numérico inalámbrico, 19 Teclas de suspensión Teclado numérico Digital para computadora de Escritorio PC portáti",
+          "marca": "Bewinner",
+          "color": "default",
+          "precio": 30.71,
+          "existencias": 4
+        },
+        {
+          "opcion": 2,
+          "product_id": "B08KW2TM84",
+          "titulo": "Teclado Mecánico Recargable, Teclado para Juegos Inalámbrico / con Cable USB Bluetooth 5.0 con Retroiluminación RGB, Int",
+          "marca": "eConnect-EU",
+          "color": "White",
+          "precio": 19.74,
+          "existencias": 30
+        },
+        {
+          "opcion": 3,
+          "product_id": "B08KZTS1GN",
+          "titulo": "Teclado mecánico para Juegos con Bluetooth, Dos Modos inalámbricos y con Cable, 3 Canales de conexión Bluetooth, 18 RGB ",
+          "marca": "FELiCON",
+          "color": "blanco",
+          "precio": 20.77,
+          "existencias": 2
+        },
+        {
+          "opcion": 4,
+          "product_id": "B098X6RVK7",
+          "titulo": "KIHL Teclado numérico inalámbrico Bluetooth Modos duales N970 28 Teclas con Teclado numérico Mini HUB USB para computado",
+          "marca": "KIHL",
+          "color": "gris",
+          "precio": 9.47,
+          "existencias": 12
+        },
+        {
+          "opcion": 5,
+          "product_id": "B00DHHL2FA",
+          "titulo": "Qisan 2.4G Teclado numérico mecánico inalámbrico GATERON Interruptor Rojo 21 Teclas Diseño extendido Magicforce",
+          "marca": "Qisan",
+          "color": "desconocido",
+          "precio": 34.36,
+          "existencias": 22
+        }
+      ]
+    },
+    {
+      "turno": 3,
+      "herramienta": "fijar_cantidad",
+      "argumentos": {
+        "product_id": "B083FXVDR8",
+        "cantidad": 40
+      },
+      "resultado": {
+        "ok": false,
+        "motivo": "Solo hay 4 unidades disponibles.",
+        "existencias": 4
+      }
+    }
+  ],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {},
+    "cotizaciones": {},
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "un pedido",
+      "ok": false
+    },
+    {
+      "criterio": "menos de cuarenta teclados",
+      "ok": false
+    }
+  ],
+  "violaciones": [],
+  "completado": false
+}

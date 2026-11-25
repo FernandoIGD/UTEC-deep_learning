@@ -1,0 +1,37 @@
+{
+  "id": "E09",
+  "situacion": "Producto inexistente en el catálogo",
+  "entradas": [
+    "Quiero comprar un coche eléctrico Tesla Model 3."
+  ],
+  "respuestas": [
+    "No se encuentran productos eléctricos Tesla Model 3 en el catálogo. Por favor, indíqueme otras características como tipo, precio o marca para buscar alternativas."
+  ],
+  "tiempos": [
+    {
+      "total": 4.603405866999992,
+      "llm": 4.603373898999962,
+      "herramientas": 0.0
+    }
+  ],
+  "operaciones": [],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {},
+    "cotizaciones": {},
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "sin pedido",
+      "ok": true
+    },
+    {
+      "criterio": "sin carrito",
+      "ok": true
+    }
+  ],
+  "violaciones": [],
+  "completado": true
+}

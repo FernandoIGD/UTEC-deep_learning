@@ -1,0 +1,282 @@
+{
+  "id": "E06",
+  "situacion": "Cambio de stock entre cotización y confirmación, y confirmación repetida",
+  "entradas": [
+    "Quiero tres toallas de baño. Elige tú la primera opción disponible y cotiza.",
+    "Sí, confirmo la compra.",
+    "Entonces lleva las unidades que queden disponibles y cotiza de nuevo.",
+    "Confirmo.",
+    "Confirmo otra vez, por si acaso."
+  ],
+  "respuestas": [
+    "He seleccionado 3 toallas de baño de la marca DSSYEAH. El total es de 72,93 euros. ¿Deseas que cotizamos este pedido o agregar otro producto?",
+    "No se puede confirmar el pedido porque solo hay 2 toallas disponibles, no 3. ¿Te gustaría cambiar la cantidad a 2 o elegir otra opción?",
+    "El pedido se ha cotizado correctamente por 48,62 euros con 2 toallas de baño de la marca DSSYEAH. ¿Aceptas este total para confirmar la compra?",
+    "El pedido ha sido confirmado con éxito. Has comprado 2 toallas de baño de la marca DSSYEAH por un total de 48,62 euros.",
+    "El pedido ya fue confirmado anteriormente. No se pueden repetir las confirmaciones. Por favor, verifica el estado del pedido o solicita otro."
+  ],
+  "tiempos": [
+    {
+      "total": 18.26252393699997,
+      "llm": 18.23150896300001,
+      "herramientas": 0.03069914900004278
+    },
+    {
+      "total": 6.682684125000037,
+      "llm": 6.682475707000094,
+      "herramientas": 7.677099995362369e-05
+    },
+    {
+      "total": 13.038277914000105,
+      "llm": 13.03787525100006,
+      "herramientas": 0.00013459100000545732
+    },
+    {
+      "total": 8.865200307999999,
+      "llm": 8.864919493999992,
+      "herramientas": 0.00011596900003496557
+    },
+    {
+      "total": 4.308459663999997,
+      "llm": 4.308430453000028,
+      "herramientas": 0.0
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 1,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "toallas de baño"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B07ZNQ5DFJ",
+          "titulo": "DSSYEAH Toalla de baño Toalla de Playa Placa Militar de Londres Tipo Realista Militar Tipografía Impresión de póster Pla",
+          "marca": "DSSYEAH",
+          "color": "As Picture",
+          "precio": 24.31,
+          "existencias": 10
+        },
+        {
+          "opcion": 2,
+          "product_id": "B07ZJ7C5P7",
+          "titulo": "DSSYEAH 80 X 130CM Toalla de baño de Alta absorción Sábana de baño Liviana y Grande para Playa Inicio SPA Piscina Gimnas",
+          "marca": "DSSYEAH",
+          "color": "As Picture",
+          "precio": 47.23,
+          "existencias": 21
+        },
+        {
+          "opcion": 3,
+          "product_id": "B082TVK46H",
+          "titulo": "Sweeth Toalla de baño Toalla de Playa Grande y Suave 130X80CM Placa de Londres Tipografía de Aspecto Realista Impresión ",
+          "marca": "Sweeth",
+          "color": "41",
+          "precio": 22.17,
+          "existencias": 30
+        },
+        {
+          "opcion": 4,
+          "product_id": "B07WFBFVFB",
+          "titulo": "Annays Placa de Piedra Absorbente Ligero Secado rápido Toallas SPA Traje de baño Toalla de baño y Ducha Manta de Playa p",
+          "marca": "Annays",
+          "color": "As Picture",
+          "precio": 48.8,
+          "existencias": 26
+        },
+        {
+          "opcion": 5,
+          "product_id": "B077MCXVSM",
+          "titulo": "Toallas de baño de algodón, lavables a máquina, 3 piezas",
+          "marca": "Luwu-Store",
+          "color": "Multicolor",
+          "precio": 14.4,
+          "existencias": 11
+        }
+      ]
+    },
+    {
+      "turno": 1,
+      "herramienta": "fijar_cantidad",
+      "argumentos": {
+        "product_id": "B07ZNQ5DFJ",
+        "cantidad": 3
+      },
+      "resultado": {
+        "ok": true,
+        "cantidad": 3,
+        "carrito": {
+          "items": [
+            {
+              "product_id": "B07ZNQ5DFJ",
+              "titulo": "DSSYEAH Toalla de baño Toalla de Playa Placa Militar de Londres Tipo Realista Mi",
+              "cantidad": 3,
+              "precio": 24.31
+            }
+          ],
+          "total": 72.93,
+          "presupuesto": null,
+          "restante": null
+        }
+      }
+    },
+    {
+      "turno": 2,
+      "herramienta": "cotizar",
+      "argumentos": {},
+      "resultado": {
+        "ok": false,
+        "cotizacion_id": "C1",
+        "total": 72.93,
+        "items": [
+          {
+            "titulo": "DSSYEAH Toalla de baño Toalla de Playa Placa Militar de Londres Tipo Realista Mi",
+            "cantidad": 3,
+            "precio": 24.31
+          }
+        ],
+        "problemas": [
+          {
+            "product_id": "B07ZNQ5DFJ",
+            "problema": "existencias",
+            "pedidas": 3,
+            "disponibles": 2
+          }
+        ]
+      }
+    },
+    {
+      "turno": 3,
+      "herramienta": "fijar_cantidad",
+      "argumentos": {
+        "product_id": "B07ZNQ5DFJ",
+        "cantidad": 2
+      },
+      "resultado": {
+        "ok": true,
+        "cantidad": 2,
+        "carrito": {
+          "items": [
+            {
+              "product_id": "B07ZNQ5DFJ",
+              "titulo": "DSSYEAH Toalla de baño Toalla de Playa Placa Militar de Londres Tipo Realista Mi",
+              "cantidad": 2,
+              "precio": 24.31
+            }
+          ],
+          "total": 48.62,
+          "presupuesto": null,
+          "restante": null
+        }
+      }
+    },
+    {
+      "turno": 3,
+      "herramienta": "cotizar",
+      "argumentos": {},
+      "resultado": {
+        "ok": true,
+        "cotizacion_id": "C2",
+        "total": 48.62,
+        "items": [
+          {
+            "titulo": "DSSYEAH Toalla de baño Toalla de Playa Placa Militar de Londres Tipo Realista Mi",
+            "cantidad": 2,
+            "precio": 24.31
+          }
+        ],
+        "problemas": []
+      }
+    },
+    {
+      "turno": 4,
+      "herramienta": "confirmar_pedido",
+      "argumentos": {
+        "cotizacion_id": "C2"
+      },
+      "resultado": {
+        "ok": true,
+        "repetido": false,
+        "pedido": {
+          "pedido_id": "P1",
+          "cotizacion_id": "C2",
+          "items": [
+            [
+              "B07ZNQ5DFJ",
+              2,
+              24.31
+            ]
+          ],
+          "total": 48.62
+        }
+      }
+    }
+  ],
+  "estado_final": {
+    "existencias": {
+      "B07ZNQ5DFJ": [
+        2,
+        0
+      ]
+    },
+    "carrito": {},
+    "cotizaciones": {
+      "C1": {
+        "items": [
+          [
+            "B07ZNQ5DFJ",
+            3,
+            24.31
+          ]
+        ],
+        "total": 72.93,
+        "estado": "con_problemas"
+      },
+      "C2": {
+        "items": [
+          [
+            "B07ZNQ5DFJ",
+            2,
+            24.31
+          ]
+        ],
+        "total": 48.62,
+        "estado": "confirmada"
+      }
+    },
+    "pedidos": [
+      {
+        "pedido_id": "P1",
+        "cotizacion_id": "C2",
+        "items": [
+          {
+            "product_id": "B07ZNQ5DFJ",
+            "titulo": "DSSYEAH Toalla de baño Toalla de Playa Placa Militar de Londres Tipo Realista Militar Tipografía Impresión de póster Placa Militar de Londres Diseño Toallas de baño 80 X 130CM",
+            "cantidad": 2,
+            "precio": 24.31
+          }
+        ],
+        "total": 48.62
+      }
+    ]
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "rechaza la primera confirmación",
+      "ok": false
+    },
+    {
+      "criterio": "un solo pedido",
+      "ok": true
+    },
+    {
+      "criterio": "dos toallas",
+      "ok": true
+    }
+  ],
+  "violaciones": [],
+  "completado": false
+}

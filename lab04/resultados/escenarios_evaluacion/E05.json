@@ -1,0 +1,170 @@
+{
+  "id": "E05",
+  "situacion": "Corrección de una transcripción antes de ejecutar una compra",
+  "entradas": [
+    "Agrega catorce tazas de cerámica al carrito.",
+    "No, eso está mal transcrito. Dije cuatro tazas, no catorce.",
+    "Sí, cotiza las cuatro.",
+    "Confirmo."
+  ],
+  "respuestas": [
+    "Para agregar catorce tazas de cerámica, primero necesito conocer el modelo, marca o características específicas que buscas. ¿Podrías especificar más detalles, como color, diseño o marca?",
+    "Perfecto, buscaremos cuatro tazas de cerámica. ¿Tienes alguna preferencia específica, como marca, diseño o color? Si no, te presento opciones con existencias.",
+    "Tienes varias opciones de tazas de cerámica. Aquí las más relevantes con existencias:  \n1. Half Moon Bay – Taza Harry Potter Ravenclaw, negro, 103,63 euros (existencias: 6)  \n2. HP – Taza térmica Voldemort, otro/mixto, 5,51 euros (existencias: 13)  \n3. Paladone – Taza Aladdin Genie, azul, 68,52 euros (existencias: 28)  \n\n¿Te refieres a una de estas? Si sí, dime cuál y te cotizaré.",
+    "La cotización está lista: 4 tazas térmicas de HP por 5,51 euros cada una, total 22,04 euros. ¿Aceptas este pedido?"
+  ],
+  "tiempos": [
+    {
+      "total": 4.909207415000083,
+      "llm": 4.909177877000047,
+      "herramientas": 0.0
+    },
+    {
+      "total": 5.360757698000043,
+      "llm": 5.360728300000005,
+      "herramientas": 0.0
+    },
+    {
+      "total": 18.126274637999927,
+      "llm": 18.107523193000134,
+      "herramientas": 0.017861407000054896
+    },
+    {
+      "total": 12.375815797999962,
+      "llm": 12.37539247199993,
+      "herramientas": 0.0001373320000084277
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 3,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "tazas de cerámica"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B07MWDQLRF",
+          "titulo": "Taza de Desayuno Harry Potter Ravenclaw (cerámica, negra)",
+          "marca": "Half Moon Bay",
+          "color": "Negro",
+          "precio": 103.63,
+          "existencias": 6
+        },
+        {
+          "opcion": 2,
+          "product_id": "B01MZE31XD",
+          "titulo": "HP 599386031 - Mug-termica Voldemort",
+          "marca": "HP",
+          "color": "Other/Mixed",
+          "precio": 5.51,
+          "existencias": 13
+        },
+        {
+          "opcion": 3,
+          "product_id": "B07N1RD7MM",
+          "titulo": "Paladone Aladdin Genie - Taza de café con licencia oficial de Disney, cerámica",
+          "marca": "Paladone",
+          "color": "Azul",
+          "precio": 68.52,
+          "existencias": 28
+        },
+        {
+          "opcion": 4,
+          "product_id": "B08GKGV363",
+          "titulo": "Plancha de cerámica digital Hot Tools Signature Series 25mm (tecnología cerámica; Pulse Technology; hasta 220°C; apagado",
+          "marca": "Hot Tools",
+          "color": "Negro",
+          "precio": 31.17,
+          "existencias": 3
+        },
+        {
+          "opcion": 5,
+          "product_id": "B0815HT399",
+          "titulo": "Paladin Blanco Experiencia A La Taza, 250g",
+          "marca": "Paladin",
+          "color": "desconocido",
+          "precio": 28.43,
+          "existencias": 26
+        }
+      ]
+    },
+    {
+      "turno": 4,
+      "herramienta": "fijar_cantidad",
+      "argumentos": {
+        "product_id": "B01MZE31XD",
+        "cantidad": 4
+      },
+      "resultado": {
+        "ok": true,
+        "cantidad": 4,
+        "carrito": {
+          "items": [
+            {
+              "product_id": "B01MZE31XD",
+              "titulo": "HP 599386031 - Mug-termica Voldemort",
+              "cantidad": 4,
+              "precio": 5.51
+            }
+          ],
+          "total": 22.04,
+          "presupuesto": null,
+          "restante": null
+        }
+      }
+    },
+    {
+      "turno": 4,
+      "herramienta": "cotizar",
+      "argumentos": {},
+      "resultado": {
+        "ok": true,
+        "cotizacion_id": "C1",
+        "total": 22.04,
+        "items": [
+          {
+            "titulo": "HP 599386031 - Mug-termica Voldemort",
+            "cantidad": 4,
+            "precio": 5.51
+          }
+        ],
+        "problemas": []
+      }
+    }
+  ],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {
+      "B01MZE31XD": 4
+    },
+    "cotizaciones": {
+      "C1": {
+        "items": [
+          [
+            "B01MZE31XD",
+            4,
+            5.51
+          ]
+        ],
+        "total": 22.04,
+        "estado": "pendiente"
+      }
+    },
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "un pedido",
+      "ok": false
+    },
+    {
+      "criterio": "cuatro tazas",
+      "ok": false
+    }
+  ],
+  "violaciones": [],
+  "completado": false
+}

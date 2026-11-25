@@ -1,0 +1,198 @@
+{
+  "id": "E05",
+  "situacion": "Corrección de una transcripción antes de ejecutar una compra",
+  "entradas": [
+    "Agrega 14 tazas de cerámica al carrito.",
+    "No, eso está mal escrito. Dije cuatro tazas, no catorce.",
+    "Sí, cotiza a las 4.",
+    "Confirmo."
+  ],
+  "respuestas": [
+    "Para agregar 14 tazas de cerámica, primero necesito conocer el modelo, marca o características específicas que buscas. ¿Podrías especificar más detalles, como color, diseño o marca?",
+    "Busco tazas de cerámica con 4 unidades. ¿Tienes alguna preferencia específica como marca, diseño o color?",
+    "Tienes varias opciones de tazas de cerámica. La primera es de la marca Half Moon Bay, negro, con 103,63 euros por unidad, pero solo hay 6 en existencia. La segunda es de HP, con 5,51 euros por unidad y 13 en existencias. La tercera es de Paladone, azul, 68,52 euros por unidad, con 28 en existencias. ¿Te gustaría que agregáramos 4 unidades de alguna de estas opciones?",
+    "Se han agregado 4 tazas de cerámica de la marca HP al carrito. El total es de 22,04 euros. ¿Quieres que cotizamos o agreguemos más productos?"
+  ],
+  "tiempos": [
+    {
+      "total": 33.66685505300006,
+      "llm": 5.432524232000105,
+      "herramientas": 0.0,
+      "asr": 0.922641897000176,
+      "tts": 27.311656873999937
+    },
+    {
+      "total": 19.580996022999898,
+      "llm": 3.2771495449999293,
+      "herramientas": 0.0,
+      "asr": 0.8805064319999474,
+      "tts": 15.423311608999938
+    },
+    {
+      "total": 88.31619611499968,
+      "llm": 15.76776924600017,
+      "herramientas": 0.01723734099982721,
+      "asr": 0.8742834150000363,
+      "tts": 71.65674315399974
+    },
+    {
+      "total": 33.73258299100007,
+      "llm": 10.286554481999929,
+      "herramientas": 7.447000007232418e-05,
+      "asr": 0.8476618740000958,
+      "tts": 22.598170150999977
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 3,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "tazas de cerámica"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B07MWDQLRF",
+          "titulo": "Taza de Desayuno Harry Potter Ravenclaw (cerámica, negra)",
+          "marca": "Half Moon Bay",
+          "color": "Negro",
+          "precio": 103.63,
+          "existencias": 6
+        },
+        {
+          "opcion": 2,
+          "product_id": "B01MZE31XD",
+          "titulo": "HP 599386031 - Mug-termica Voldemort",
+          "marca": "HP",
+          "color": "Other/Mixed",
+          "precio": 5.51,
+          "existencias": 13
+        },
+        {
+          "opcion": 3,
+          "product_id": "B07N1RD7MM",
+          "titulo": "Paladone Aladdin Genie - Taza de café con licencia oficial de Disney, cerámica",
+          "marca": "Paladone",
+          "color": "Azul",
+          "precio": 68.52,
+          "existencias": 28
+        },
+        {
+          "opcion": 4,
+          "product_id": "B08GKGV363",
+          "titulo": "Plancha de cerámica digital Hot Tools Signature Series 25mm (tecnología cerámica; Pulse Technology; hasta 220°C; apagado",
+          "marca": "Hot Tools",
+          "color": "Negro",
+          "precio": 31.17,
+          "existencias": 3
+        },
+        {
+          "opcion": 5,
+          "product_id": "B0815HT399",
+          "titulo": "Paladin Blanco Experiencia A La Taza, 250g",
+          "marca": "Paladin",
+          "color": "desconocido",
+          "precio": 28.43,
+          "existencias": 26
+        }
+      ]
+    },
+    {
+      "turno": 4,
+      "herramienta": "fijar_cantidad",
+      "argumentos": {
+        "product_id": "B01MZE31XD",
+        "cantidad": 4
+      },
+      "resultado": {
+        "ok": true,
+        "cantidad": 4,
+        "carrito": {
+          "items": [
+            {
+              "product_id": "B01MZE31XD",
+              "titulo": "HP 599386031 - Mug-termica Voldemort",
+              "cantidad": 4,
+              "precio": 5.51
+            }
+          ],
+          "total": 22.04,
+          "presupuesto": null,
+          "restante": null
+        }
+      }
+    }
+  ],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {
+      "B01MZE31XD": 4
+    },
+    "cotizaciones": {},
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "un pedido",
+      "ok": false
+    },
+    {
+      "criterio": "cuatro tazas",
+      "ok": false
+    }
+  ],
+  "violaciones": [],
+  "completado": false,
+  "voz": [
+    {
+      "turno": 1,
+      "dicho": "Agrega catorce tazas de cerámica al carrito.",
+      "transcrito": "Agrega 14 tazas de cerámica al carrito.",
+      "wer": 0.0,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.07692307692307693,
+      "transcripcion_tts": "Para agregar caros de tazas de cerámica, primero necesito conocer el modelo, marca o características específicas que buscas. Podrías especificar más detalles como color, diseño o marca.",
+      "similitud": 0.9912017583847046
+    },
+    {
+      "turno": 2,
+      "dicho": "No, eso está mal transcrito. Dije cuatro tazas, no catorce.",
+      "transcrito": "No, eso está mal escrito. Dije cuatro tazas, no catorce.",
+      "wer": 0.1,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.0,
+      "transcripcion_tts": "Busco tazas de cerámica con 4 unidades. ¿Tienes alguna preferencia específica como marca, diseño o color?",
+      "similitud": 0.9888620972633362
+    },
+    {
+      "turno": 3,
+      "dicho": "Sí, cotiza las cuatro.",
+      "transcrito": "Sí, cotiza a las 4.",
+      "wer": 0.25,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.18421052631578946,
+      "transcripcion_tts": "Tiene varias opciones de tazas de cerámica. La primera es de la marca Half Moon Bay, negro, con 113,63 euros por unidad, pero solo hay 6 en existencia. La segunda es de HP, con 5,51 euros por unidad y 3 en existencias. La tercera es de Paladone, azul, 68,52 euros por unidad, con 28 en existencias. Te gustaría que agregáramos 4 unidades de alguna de estas opciones.",
+      "similitud": 0.9911485910415649
+    },
+    {
+      "turno": 4,
+      "dicho": "Confirmo.",
+      "transcrito": "Confirmo.",
+      "wer": 0.0,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.06896551724137931,
+      "transcripcion_tts": "Se han agregado 4 tazas de cerámica de la marca HPA El Carrito. El total es de 22 euros con 4 céntimos. ¿Quieres que cotizamos o agreguemos más productos?",
+      "similitud": 0.9908813238143921
+    }
+  ]
+}

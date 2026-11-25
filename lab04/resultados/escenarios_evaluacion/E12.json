@@ -1,0 +1,92 @@
+{
+  "id": "E12",
+  "situacion": "Atributo no verificable",
+  "entradas": [
+    "¿Qué ratón inalámbrico me recomiendas que sea resistente al agua?"
+  ],
+  "respuestas": [
+    "No hay ratones inalámbricos resistente al agua en la lista. El producto más cercano es el de Sony, pero es un altavoz, no un ratón. Te sugiero revisar si buscas un dispositivo diferente o si necesitas un ratón con resistencia al agua. ¿Te refieres a un ratón con protección contra el agua o a un dispositivo de control?"
+  ],
+  "tiempos": [
+    {
+      "total": 12.827743083999962,
+      "llm": 12.804444788000069,
+      "herramientas": 0.023151084999994964
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 1,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "ratón inalámbrico resistente al agua"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B01BYFSX6M",
+          "titulo": "TECKNET Mini Ratón Inalámbrico Wireless Mouse Óptico, Omni 2.4G Ratón Portátil con Receptor USB Nano, 4 Botones, 3 dpi A",
+          "marca": "TECKNET",
+          "color": "Azul",
+          "precio": 16.36,
+          "existencias": 3
+        },
+        {
+          "opcion": 2,
+          "product_id": "B08T688GFK",
+          "titulo": "GothicBride Trampas para Ratones Set de 2 Reutilizable Trampa Ratones de Transparente para Interiores y Exteriores Hogar",
+          "marca": "GothicBride",
+          "color": "desconocido",
+          "precio": 9.92,
+          "existencias": 14
+        },
+        {
+          "opcion": 3,
+          "product_id": "B07GTBRSCY",
+          "titulo": "Sony SRSXB01B - Altavoz inalámbrico portátil (Compacto, Bluetooth, Extra Bass, 6h de batería, Resistente al Agua IPX5, V",
+          "marca": "Sony",
+          "color": "Negro",
+          "precio": 33.61,
+          "existencias": 13
+        },
+        {
+          "opcion": 4,
+          "product_id": "B08BN8VRFK",
+          "titulo": "Blade Hawks RGB Alfombrilla Gaming con 3 Puertos USB, Alfombrilla de Ratón con Altavoz, 15 Modos de Lluminación, Resiste",
+          "marca": "Blade Hawks",
+          "color": "Black",
+          "precio": 19.53,
+          "existencias": 27
+        },
+        {
+          "opcion": 5,
+          "product_id": "B09818HP4W",
+          "titulo": "Timbre inalámbrico, la batería 200 accionada a distancia a prueba de agua 1 Transmisor Receptor 1 timbre inalámbrico Bel",
+          "marca": "SXXYTCWL",
+          "color": "2x1",
+          "precio": 28.72,
+          "existencias": 26
+        }
+      ]
+    }
+  ],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {},
+    "cotizaciones": {},
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "busca",
+      "ok": true
+    },
+    {
+      "criterio": "sin pedido",
+      "ok": true
+    }
+  ],
+  "violaciones": [],
+  "completado": true
+}

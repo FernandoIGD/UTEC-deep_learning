@@ -1,0 +1,276 @@
+{
+  "id": "E02",
+  "situacion": "Solicitud ambigua que requiere una aclaración",
+  "entradas": [
+    "Quiero comprar una funda.",
+    "Es para un iPhone 11, solo una",
+    "Está bien, cotiza esa funda",
+    "Confirmo."
+  ],
+  "respuestas": [
+    "¿Para qué tipo de dispositivo quieres una funda? Por ejemplo, teléfono, tableta o ordenador. También puedo ayudarte si indicas el tamaño, marca o modelo específico.",
+    "Te presento tres opciones disponibles para una funda para iPhone 11:\n\n1. Urvoix – Funda militar en negro, 25,74 euros.  \n2. Spigen – Funda Ultra Hybrid en negro mate, 18,01 euros.  \n3. Evutec – Funda balística en negro, 27,57 euros.  \n\n¿Te gustaría que agregáramos una de estas al carrito?",
+    "La cotización para la funda Spigen está lista: 18,01 euros. ¿Aceptas este precio para proceder con el pedido?",
+    "Tu pedido ha sido confirmado con éxito. Has comprado la funda Spigen para iPhone 11 por 18,01 euros. ¡Listo!"
+  ],
+  "tiempos": [
+    {
+      "total": 32.24840668100023,
+      "llm": 4.199837609000042,
+      "herramientas": 0.0,
+      "asr": 1.0650817130001542,
+      "tts": 26.983434903999978
+    },
+    {
+      "total": 66.08508511100013,
+      "llm": 13.990292168999986,
+      "herramientas": 0.02720701800012648,
+      "asr": 1.0058119110001371,
+      "tts": 51.061582643000065
+    },
+    {
+      "total": 34.083700445999966,
+      "llm": 11.89964349800016,
+      "herramientas": 0.00014048399998500827,
+      "asr": 1.0083699939998496,
+      "tts": 21.17527300300003
+    },
+    {
+      "total": 25.722782197999777,
+      "llm": 8.504800762000059,
+      "herramientas": 8.52689997827838e-05,
+      "asr": 0.8697112909999305,
+      "tts": 16.34793584399995
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 2,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "funda para iPhone 11"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B00MNMT78Y",
+          "titulo": "Funda de Urvoix para enganchar al cinturón y llevar el teléfono móvil, diseño militar de camuflaje, color negro, tamaño ",
+          "marca": "Urvoix",
+          "color": "negro",
+          "precio": 25.74,
+          "existencias": 13
+        },
+        {
+          "opcion": 2,
+          "product_id": "B07T6Y2HG7",
+          "titulo": "Spigen Funda Ultra Hybrid Compatible con iPhone 11 - Negro Mate",
+          "marca": "Spigen",
+          "color": "Negro Mate",
+          "precio": 18.01,
+          "existencias": 29
+        },
+        {
+          "opcion": 3,
+          "product_id": "B07WGX1PJZ",
+          "titulo": "Evutec Funda de Nailon balístico para iPhone 11 de 6.1 Pulgadas, Resistente y única, de Grado Militar, a Prueba de Golpe",
+          "marca": "Evutec",
+          "color": "Negro",
+          "precio": 27.57,
+          "existencias": 24
+        },
+        {
+          "opcion": 4,
+          "product_id": "B00M3QA932",
+          "titulo": "JETech Funda Compatible iPhone 6s Plus y iPhone 6 Plus, Anti-Choques y Anti-Arañazos (Negro)",
+          "marca": "JETech",
+          "color": "Negro",
+          "precio": 14.0,
+          "existencias": 19
+        },
+        {
+          "opcion": 5,
+          "product_id": "B07S2T58XW",
+          "titulo": "Funda Silicona para iPhone 6 y 6s Silicone Case, Textura Suave, Forro Microfibra (Amarillo)",
+          "marca": "TOP-FUNDA",
+          "color": "desconocido",
+          "precio": 69.42,
+          "existencias": 26
+        }
+      ]
+    },
+    {
+      "turno": 3,
+      "herramienta": "fijar_cantidad",
+      "argumentos": {
+        "product_id": "B07T6Y2HG7",
+        "cantidad": 1
+      },
+      "resultado": {
+        "ok": true,
+        "cantidad": 1,
+        "carrito": {
+          "items": [
+            {
+              "product_id": "B07T6Y2HG7",
+              "titulo": "Spigen Funda Ultra Hybrid Compatible con iPhone 11 - Negro Mate",
+              "cantidad": 1,
+              "precio": 18.01
+            }
+          ],
+          "total": 18.01,
+          "presupuesto": null,
+          "restante": null
+        }
+      }
+    },
+    {
+      "turno": 3,
+      "herramienta": "cotizar",
+      "argumentos": {},
+      "resultado": {
+        "ok": true,
+        "cotizacion_id": "C1",
+        "total": 18.01,
+        "items": [
+          {
+            "titulo": "Spigen Funda Ultra Hybrid Compatible con iPhone 11 - Negro Mate",
+            "cantidad": 1,
+            "precio": 18.01
+          }
+        ],
+        "problemas": []
+      }
+    },
+    {
+      "turno": 4,
+      "herramienta": "confirmar_pedido",
+      "argumentos": {
+        "cotizacion_id": "C1"
+      },
+      "resultado": {
+        "ok": true,
+        "repetido": false,
+        "pedido": {
+          "pedido_id": "P1",
+          "cotizacion_id": "C1",
+          "items": [
+            [
+              "B07T6Y2HG7",
+              1,
+              18.01
+            ]
+          ],
+          "total": 18.01
+        }
+      }
+    }
+  ],
+  "estado_final": {
+    "existencias": {
+      "B07T6Y2HG7": [
+        29,
+        28
+      ]
+    },
+    "carrito": {},
+    "cotizaciones": {
+      "C1": {
+        "items": [
+          [
+            "B07T6Y2HG7",
+            1,
+            18.01
+          ]
+        ],
+        "total": 18.01,
+        "estado": "confirmada"
+      }
+    },
+    "pedidos": [
+      {
+        "pedido_id": "P1",
+        "cotizacion_id": "C1",
+        "items": [
+          {
+            "product_id": "B07T6Y2HG7",
+            "titulo": "Spigen Funda Ultra Hybrid Compatible con iPhone 11 - Negro Mate",
+            "cantidad": 1,
+            "precio": 18.01
+          }
+        ],
+        "total": 18.01
+      }
+    ]
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "pregunta en el turno 1",
+      "ok": true
+    },
+    {
+      "criterio": "sin carrito en el turno 1",
+      "ok": true
+    },
+    {
+      "criterio": "un pedido",
+      "ok": true
+    },
+    {
+      "criterio": "una funda",
+      "ok": true
+    }
+  ],
+  "violaciones": [],
+  "completado": true,
+  "voz": [
+    {
+      "turno": 1,
+      "dicho": "Quiero comprar una funda.",
+      "transcrito": "Quiero comprar una funda.",
+      "wer": 0.0,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.0,
+      "transcripcion_tts": "¿Para qué tipo de dispositivo quieres una funda? Por ejemplo, teléfono, tableta o ordenador. También puedo ayudarte si indicas el tamaño, marca o modelo específico.",
+      "similitud": 0.9920915961265564
+    },
+    {
+      "turno": 2,
+      "dicho": "Es para un iPhone once. Solo una.",
+      "transcrito": "Es para un iPhone 11, solo una",
+      "wer": 0.0,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.2727272727272727,
+      "transcripcion_tts": "Te presento 3 opciones disponibles para una funda para iPhone 11. Uno Urbeix, funda militar en negro, 25,74€. Dos Pigen funda ultra hybrid en negro mate, 18,10€. Tres, Ebutec funda balística en negro, 27,57€. Te gustaría que agregáramos una de estas al carrito.",
+      "similitud": 0.9916903972625732
+    },
+    {
+      "turno": 3,
+      "dicho": "Está bien, cotiza esa funda.",
+      "transcrito": "Está bien, cotiza esa funda",
+      "wer": 0.0,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.0,
+      "transcripcion_tts": "La cotización para la funda Spigen está lista. 18 euros con un centimos. Aceptas este precio para proceder con el pedido.",
+      "similitud": 0.9916229248046875
+    },
+    {
+      "turno": 4,
+      "dicho": "Confirmo.",
+      "transcrito": "Confirmo.",
+      "wer": 0.0,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.18181818181818182,
+      "transcripcion_tts": "Tu pedido ha sido confirmado con éxito. Has comprado la funda Spigen para iPhone 11x18€ con 11 céntimos. Listo.",
+      "similitud": 0.9898555278778076
+    }
+  ]
+}

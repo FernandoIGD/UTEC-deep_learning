@@ -1,0 +1,66 @@
+{
+  "id": "E20",
+  "situacion": "Varios productos, cambio de producto y compra final",
+  "entradas": [
+    "Necesito un ratón y un teclado para el ordenador, presupuesto de setenta euros.",
+    "Cambia el teclado por otro más barato.",
+    "Cotiza.",
+    "Confirmo."
+  ],
+  "respuestas": [
+    "Actualizo el presupuesto máximo a 70 euros.  \nBusco ratones y teclados compatibles con el ordenador dentro de ese rango.",
+    "Actualizo el presupuesto máximo a 70 euros.  \nBusco ratones y teclados más económicos para el ordenador.",
+    "No hay productos en el carrito. Por favor, selecciona un ratón o teclado antes de solicitar una cotización.",
+    "No hay productos en el carrito. No es posible confirmar un pedido sin artículos seleccionados. Por favor, elija un ratón o teclado y solicite nuevamente la cotización."
+  ],
+  "tiempos": [
+    {
+      "total": 4.4891238719999365,
+      "llm": 4.489082268999937,
+      "herramientas": 0.0
+    },
+    {
+      "total": 3.404402821999838,
+      "llm": 3.4043769049999355,
+      "herramientas": 0.0
+    },
+    {
+      "total": 3.2460317489999397,
+      "llm": 3.2460037060000104,
+      "herramientas": 0.0
+    },
+    {
+      "total": 5.355347918000007,
+      "llm": 5.355318507999982,
+      "herramientas": 0.0
+    }
+  ],
+  "operaciones": [],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {},
+    "cotizaciones": {},
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "un pedido",
+      "ok": false
+    },
+    {
+      "criterio": "un teclado",
+      "ok": false
+    },
+    {
+      "criterio": "un ratón",
+      "ok": false
+    },
+    {
+      "criterio": "dentro del presupuesto",
+      "ok": true
+    }
+  ],
+  "violaciones": [],
+  "completado": false
+}

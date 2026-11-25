@@ -1,0 +1,313 @@
+{
+  "id": "E01",
+  "situacion": "Compra que cumple las restricciones y termina con un pedido confirmado",
+  "entradas": [
+    "Hola, necesito un iPhone 11 y dos auriculares YouTube. Mi presupuesto es de 80 euros.",
+    "Me quedo con las dos opciones que propones. Prepara la cotización.",
+    "Sí, confirmo la compra."
+  ],
+  "respuestas": [
+    "Tienes tres opciones con existencias:  \n1. iPhone 11 de Apple por 89,86 euros.  \n2. Auriculares Mpow por 22,76 euros.  \n3. Auriculares iAmotus por 31,74 euros.  \n\n¿Te gustaría que agregáramos estos productos al carrito?",
+    "La cotización está lista por un total de 112,62 euros. Incluye el iPhone 11 de Apple y los auriculares Mpow. ¿Aceptas este pedido para proceder con la compra?",
+    "El pedido ha sido confirmado con éxito. Has comprado el iPhone 11 de Apple y los auriculares Mpow por un total de 112,62 euros. ¡Disfruta tu nuevo equipo!"
+  ],
+  "tiempos": [
+    {
+      "total": 65.29618827399986,
+      "llm": 16.103368518000025,
+      "herramientas": 0.017689683000071454,
+      "asr": 1.5247048339999765,
+      "tts": 47.650262484999985
+    },
+    {
+      "total": 48.27362416899996,
+      "llm": 17.752069687000358,
+      "herramientas": 0.00021201799995651527,
+      "asr": 0.893395984000108,
+      "tts": 29.627649212999813
+    },
+    {
+      "total": 38.82422769699974,
+      "llm": 9.626991696000005,
+      "herramientas": 8.722500001567823e-05,
+      "asr": 0.9497243030000391,
+      "tts": 28.24731755799985
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 1,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "iPhone 11, auriculares para YouTube"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B07Q365LCH",
+          "titulo": "Mpow S11 Auriculares Bluetooth 5.0, Auricular aptX Deporte In Ear Inalámbrico IPX7 Impermeable con HD Audio, Auriculares",
+          "marca": "Mpow",
+          "color": "negro",
+          "precio": 22.76,
+          "existencias": 19
+        },
+        {
+          "opcion": 2,
+          "product_id": "B08L6XCTRZ",
+          "titulo": "Apple iPhone 11 (64 GB) - en Negro",
+          "marca": "Apple",
+          "color": "Negro",
+          "precio": 89.86,
+          "existencias": 19
+        },
+        {
+          "opcion": 3,
+          "product_id": "B07TTC378K",
+          "titulo": "Auriculares Bluetooth Deportivos, iAmotus Auriculares Inalámbricos Bluetooth 5.0 Mini TWS Estéreo In-Ear Cascos Bluetoot",
+          "marca": "iAmotus",
+          "color": "Negro",
+          "precio": 31.74,
+          "existencias": 26
+        },
+        {
+          "opcion": 4,
+          "product_id": "B07HHNF3QD",
+          "titulo": "Mpow Auriculares Bluetooth Deportivos, V4.1 Impermeable IPX7 In-Ear Cascos Inalámbricos,Auricular Running Deporte Correr",
+          "marca": "Mpow",
+          "color": "Verde Claro",
+          "precio": 4.7,
+          "existencias": 9
+        },
+        {
+          "opcion": 5,
+          "product_id": "B07SSSG3DX",
+          "titulo": "Luvfun Adaptador de auriculares para iPhone, [1-Pack] Adaptador de audio con conector para auriculares de 3.5 mm",
+          "marca": "Luvfun",
+          "color": "Adaptador Lightning a audio-1P",
+          "precio": 8.14,
+          "existencias": 0
+        }
+      ]
+    },
+    {
+      "turno": 2,
+      "herramienta": "fijar_cantidad",
+      "argumentos": {
+        "product_id": "B08L6XCTRZ",
+        "cantidad": 1
+      },
+      "resultado": {
+        "ok": true,
+        "cantidad": 1,
+        "carrito": {
+          "items": [
+            {
+              "product_id": "B08L6XCTRZ",
+              "titulo": "Apple iPhone 11 (64 GB) - en Negro",
+              "cantidad": 1,
+              "precio": 89.86
+            }
+          ],
+          "total": 89.86,
+          "presupuesto": null,
+          "restante": null
+        }
+      }
+    },
+    {
+      "turno": 2,
+      "herramienta": "fijar_cantidad",
+      "argumentos": {
+        "product_id": "B07Q365LCH",
+        "cantidad": 1
+      },
+      "resultado": {
+        "ok": true,
+        "cantidad": 1,
+        "carrito": {
+          "items": [
+            {
+              "product_id": "B08L6XCTRZ",
+              "titulo": "Apple iPhone 11 (64 GB) - en Negro",
+              "cantidad": 1,
+              "precio": 89.86
+            },
+            {
+              "product_id": "B07Q365LCH",
+              "titulo": "Mpow S11 Auriculares Bluetooth 5.0, Auricular aptX Deporte In Ear Inalámbrico IP",
+              "cantidad": 1,
+              "precio": 22.76
+            }
+          ],
+          "total": 112.62,
+          "presupuesto": null,
+          "restante": null
+        }
+      }
+    },
+    {
+      "turno": 2,
+      "herramienta": "cotizar",
+      "argumentos": {},
+      "resultado": {
+        "ok": true,
+        "cotizacion_id": "C1",
+        "total": 112.62,
+        "items": [
+          {
+            "titulo": "Mpow S11 Auriculares Bluetooth 5.0, Auricular aptX Deporte In Ear Inalámbrico IP",
+            "cantidad": 1,
+            "precio": 22.76
+          },
+          {
+            "titulo": "Apple iPhone 11 (64 GB) - en Negro",
+            "cantidad": 1,
+            "precio": 89.86
+          }
+        ],
+        "problemas": []
+      }
+    },
+    {
+      "turno": 3,
+      "herramienta": "confirmar_pedido",
+      "argumentos": {
+        "cotizacion_id": "C1"
+      },
+      "resultado": {
+        "ok": true,
+        "repetido": false,
+        "pedido": {
+          "pedido_id": "P1",
+          "cotizacion_id": "C1",
+          "items": [
+            [
+              "B07Q365LCH",
+              1,
+              22.76
+            ],
+            [
+              "B08L6XCTRZ",
+              1,
+              89.86
+            ]
+          ],
+          "total": 112.62
+        }
+      }
+    }
+  ],
+  "estado_final": {
+    "existencias": {
+      "B07Q365LCH": [
+        19,
+        18
+      ],
+      "B08L6XCTRZ": [
+        19,
+        18
+      ]
+    },
+    "carrito": {},
+    "cotizaciones": {
+      "C1": {
+        "items": [
+          [
+            "B07Q365LCH",
+            1,
+            22.76
+          ],
+          [
+            "B08L6XCTRZ",
+            1,
+            89.86
+          ]
+        ],
+        "total": 112.62,
+        "estado": "confirmada"
+      }
+    },
+    "pedidos": [
+      {
+        "pedido_id": "P1",
+        "cotizacion_id": "C1",
+        "items": [
+          {
+            "product_id": "B07Q365LCH",
+            "titulo": "Mpow S11 Auriculares Bluetooth 5.0, Auricular aptX Deporte In Ear Inalámbrico IPX7 Impermeable con HD Audio, Auriculares Deportivos magnéticos Micrófono Deporte Correr para Android iPhone PC etc",
+            "cantidad": 1,
+            "precio": 22.76
+          },
+          {
+            "product_id": "B08L6XCTRZ",
+            "titulo": "Apple iPhone 11 (64 GB) - en Negro",
+            "cantidad": 1,
+            "precio": 89.86
+          }
+        ],
+        "total": 112.62
+      }
+    ]
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "un pedido",
+      "ok": true
+    },
+    {
+      "criterio": "dos fundas",
+      "ok": false
+    },
+    {
+      "criterio": "un auricular",
+      "ok": true
+    },
+    {
+      "criterio": "dentro del presupuesto",
+      "ok": false
+    }
+  ],
+  "violaciones": [
+    "pedido sobre el presupuesto"
+  ],
+  "completado": false,
+  "voz": [
+    {
+      "turno": 1,
+      "dicho": "Hola, necesito dos fundas para iPhone once y unos auriculares bluetooth. Mi presupuesto es de ochenta euros.",
+      "transcrito": "Hola, necesito un iPhone 11 y dos auriculares YouTube. Mi presupuesto es de 80 euros.",
+      "wer": 0.29411764705882354,
+      "errores_cantidades": 1,
+      "errores_importes": 0,
+      "errores_productos": 2,
+      "wer_tts": 0.07142857142857142,
+      "transcripcion_tts": "Tienes 3 opciones con existencias. 1. iPhone 11 de Apple por 89 euros con 86 céntimos. 2. Auriculares Sema Pau por 22 euros con 76 céntimos. 3. Auriculares EaMotus por 31 euros con 74 céntimos. Te gustaría que agregáramos estos productos al carrito.",
+      "similitud": 0.9920248985290527
+    },
+    {
+      "turno": 2,
+      "dicho": "Me quedo con las opciones que propones. Prepara la cotización.",
+      "transcrito": "Me quedo con las dos opciones que propones. Prepara la cotización.",
+      "wer": 0.1,
+      "errores_cantidades": 1,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.03225806451612903,
+      "transcripcion_tts": "La cotización está lista por un total de 112 euros con 62 céntimos. Incluye el iPhone 11 de Apple y los auriculares Empauf. Aceptas este pedido para proceder con la compra.",
+      "similitud": 0.9915962219238281
+    },
+    {
+      "turno": 3,
+      "dicho": "Sí, confirmo la compra.",
+      "transcrito": "Sí, confirmo la compra.",
+      "wer": 0.0,
+      "errores_cantidades": 0,
+      "errores_importes": 0,
+      "errores_productos": 0,
+      "wer_tts": 0.06451612903225806,
+      "transcripcion_tts": "El pedido ha sido confirmado con éxito. Has comprado el iPhone 11 de Apple y los auriculares M-PAU por un total de 112 euros con 62 céntimos. Disfruta tu nuevo equipo.",
+      "similitud": 0.9921844005584717
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "E07",
+  "situacion": "Presupuesto insuficiente para la primera opción",
+  "entradas": [
+    "Quiero una mochila para el portátil, como máximo veinte euros en total.",
+    "Cotiza la que cumpla el presupuesto.",
+    "Confirmo."
+  ],
+  "respuestas": [
+    "Actualizo el presupuesto máximo a 20 euros.  \n¿Qué características busca en la mochila? Por ejemplo, tamaño, color o tipo de material.",
+    "Actualizo el presupuesto máximo a 20 euros.  \n¿Qué características busca en la mochila? Por ejemplo, tamaño, color o tipo de material.",
+    "¿Qué características busca en la mochila? Por ejemplo, tamaño, color o tipo de material."
+  ],
+  "tiempos": [
+    {
+      "total": 4.371555612000066,
+      "llm": 4.3715237849999085,
+      "herramientas": 0.0
+    },
+    {
+      "total": 3.9415804300000445,
+      "llm": 3.94154860499998,
+      "herramientas": 0.0
+    },
+    {
+      "total": 2.7473239409999906,
+      "llm": 2.7472952540000506,
+      "herramientas": 0.0
+    }
+  ],
+  "operaciones": [],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {},
+    "cotizaciones": {},
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "total dentro del presupuesto",
+      "ok": true
+    },
+    {
+      "criterio": "a lo sumo un pedido",
+      "ok": true
+    }
+  ],
+  "violaciones": [],
+  "completado": true
+}

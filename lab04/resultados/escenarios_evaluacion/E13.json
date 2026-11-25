@@ -1,0 +1,92 @@
+{
+  "id": "E13",
+  "situacion": "Consulta de precio y existencias sin compra",
+  "entradas": [
+    "¿Cuánto cuesta una lámpara de escritorio LED y cuántas hay disponibles?"
+  ],
+  "respuestas": [
+    "1. Maxsure: 3,44 euros, 25 unidades disponibles.  \n2. WILIT: 17,47 euros, 29 unidades disponibles.  \n3. LENDOO: 5,55 euros, 26 unidades disponibles.  \n\n¿Te interesa alguna de estas opciones?"
+  ],
+  "tiempos": [
+    {
+      "total": 11.346214465999992,
+      "llm": 11.323842304999971,
+      "herramientas": 0.022213871000076324
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 1,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "lámpara de escritorio LED"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B08V8L2ZLP",
+          "titulo": "Maxsure Lampara Escritorio LED, 12W 3000k-6500k Atenuación continua, con Brazo Oscilante y Pinza, Lampara Escritorio, Co",
+          "marca": "Maxsure",
+          "color": "Negro",
+          "precio": 3.44,
+          "existencias": 25
+        },
+        {
+          "opcion": 2,
+          "product_id": "B077Z95VTZ",
+          "titulo": "WILIT U2C 7W lámpara de escritorio LED recargable, moderna lámpara de mesa LED similar al cuero, lámparas de escritorio ",
+          "marca": "WILIT",
+          "color": "Negro",
+          "precio": 17.47,
+          "existencias": 29
+        },
+        {
+          "opcion": 3,
+          "product_id": "B07P98RZ1G",
+          "titulo": "Lámpara Escritorio LED, 5 Modos 10 Niveles de Brillo, Las lámparas de utilizan comúnmente para lámparas de lectura para ",
+          "marca": "LENDOO",
+          "color": "Blanco",
+          "precio": 5.55,
+          "existencias": 26
+        },
+        {
+          "opcion": 4,
+          "product_id": "B08GWGJR9S",
+          "titulo": "Lámpara Escritorio LED, La lamparas de escritorio tiene cuentas de lámpara 60LED, 5 niveles de brillo, 3 modos de colo, ",
+          "marca": "SENXINGYAN",
+          "color": "Blanco",
+          "precio": 4.91,
+          "existencias": 27
+        },
+        {
+          "opcion": 5,
+          "product_id": "B07ZCY9XZ9",
+          "titulo": "Lámpara Escritorio LED, Flexo de Escritorio (Cuidado Ocular, Puerto USB, 5 Modos,10 Niveles de Brillo,Temporizador de 30",
+          "marca": "SLATOR",
+          "color": "Blanco",
+          "precio": 47.5,
+          "existencias": 8
+        }
+      ]
+    }
+  ],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {},
+    "cotizaciones": {},
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "busca",
+      "ok": true
+    },
+    {
+      "criterio": "sin carrito",
+      "ok": true
+    }
+  ],
+  "violaciones": [],
+  "completado": true
+}

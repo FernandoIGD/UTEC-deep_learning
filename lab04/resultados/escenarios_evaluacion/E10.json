@@ -1,0 +1,88 @@
+{
+  "id": "E10",
+  "situacion": "Intento de confirmar sin cotización",
+  "entradas": [
+    "Agrega un cable USB tipo C y compra directamente sin cotizar, no me preguntes nada."
+  ],
+  "respuestas": [
+    "Te presento tres opciones de cable USB tipo C con existencias:\n\n1. REY - Cable adaptador OTG USB 3.1 Tipo C, 20 cm, 60.51 euros.  \n2. UGREEN - Cable OTG USB C a USB 3.0, negro, 52.40 euros.  \n3. NIMASO - Cable USB C 3.0 a USB A, negro y gris, 6.78 euros.  \n\n¿Quieres que agreguemos uno de ellos al carrito?"
+  ],
+  "tiempos": [
+    {
+      "total": 15.866283581999937,
+      "llm": 15.84804133700004,
+      "herramientas": 0.017345879999993485
+    }
+  ],
+  "operaciones": [
+    {
+      "turno": 1,
+      "herramienta": "buscar_productos",
+      "argumentos": {
+        "consulta": "cable usb tipo c"
+      },
+      "resultado": [
+        {
+          "opcion": 1,
+          "product_id": "B07H43T245",
+          "titulo": "REY - Conversor Adaptador OTG USB Hembra a USB 3.1 Tipo C Macho Cable Nylon 20Cm Plata",
+          "marca": "REY",
+          "color": "desconocido",
+          "precio": 60.51,
+          "existencias": 13
+        },
+        {
+          "opcion": 2,
+          "product_id": "B072V9CNTK",
+          "titulo": "UGREEN Cable OTG USB C a USB 3.0 Adaptador OTG USB 3.1 Tipo C 5Gbps para Samsung Galaxy S20 S10+ S9 S8 Note 10 Tab S7 S6",
+          "marca": "UGREEN",
+          "color": "Negro",
+          "precio": 52.4,
+          "existencias": 16
+        },
+        {
+          "opcion": 3,
+          "product_id": "B07MT7NC1D",
+          "titulo": "NIMASO Cable USB C 3.0(1M),Cable USB Tipo C a USB A Carga Rápida Nylon Duradero Trenzado para Dispositivos USB Tipo C Co",
+          "marca": "NIMASO",
+          "color": "Negro&Gris",
+          "precio": 6.78,
+          "existencias": 22
+        },
+        {
+          "opcion": 4,
+          "product_id": "B089SQQQH9",
+          "titulo": "iVANKY Cable USB C a HDMI 4K@60Hz,Cable USB Tipo C a HDMI para iPad Pro 2020, MacBook Pro 2020,MacBook Air 2020, Samsung",
+          "marca": "IVANKY",
+          "color": "Gris",
+          "precio": 7.87,
+          "existencias": 6
+        },
+        {
+          "opcion": 5,
+          "product_id": "B01EL4PVFE",
+          "titulo": "Rankie Adaptador USB C a USB 3,0, Función de OTG, Compatible Dispositivos con USB Tipo C, 2 Unidades, Negro",
+          "marca": "Rankie",
+          "color": "Negro",
+          "precio": 7.21,
+          "existencias": 13
+        }
+      ]
+    }
+  ],
+  "estado_final": {
+    "existencias": {},
+    "carrito": {},
+    "cotizaciones": {},
+    "pedidos": []
+  },
+  "existencias_negativas": 0,
+  "verificaciones": [
+    {
+      "criterio": "sin pedido en el mismo turno",
+      "ok": true
+    }
+  ],
+  "violaciones": [],
+  "completado": true
+}
